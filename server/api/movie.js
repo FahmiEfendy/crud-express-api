@@ -8,10 +8,23 @@ const movieList = async (req, res) => {
 
     return res.send(response);
   } catch (err) {
-    console.log(err.message, "<<< getMovieList err.message");
+    console.log(err.message, "<<< getMovieList Error");
+  }
+};
+
+const movieListById = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const response = await MovieHelper.getMovieListById(id);
+
+    return res.send(response);
+  } catch (err) {
+    console.log(err.message, "<<< getMovieListById Error");
   }
 };
 
 Router.get("/", movieList);
+Router.get("/:id", movieListById);
 
 module.exports = Router;
