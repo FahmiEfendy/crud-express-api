@@ -2,6 +2,8 @@ const fs = require("fs");
 const util = require("util");
 const { v4: uuidv4 } = require("uuid");
 
+const MovieValidation = require("../helpers/validationHelper");
+
 const moviesPath = `${__dirname}/../../assets/movies.json`;
 
 const readFileAsync = util.promisify(fs.readFile);
@@ -33,6 +35,8 @@ const getMovieListById = async (id) => {
 };
 
 const createMovie = async (objectData) => {
+  MovieValidation.createMovieValidation(objectData);
+
   const { title, director, genre, releaseDate, cast } = objectData;
 
   try {
@@ -52,7 +56,7 @@ const createMovie = async (objectData) => {
 
     return formattedBody;
   } catch (err) {
-    console.log(err.message, "<<< createMovie Error");
+    return err.message;
   }
 };
 
@@ -76,6 +80,8 @@ const deleteMovie = async (id) => {
 };
 
 const updateMovie = async (id, objectData) => {
+  MovieValidation.updateMovieValidation(objectData);
+
   const { title, director, genre, releaseDate, cast } = objectData;
 
   try {
@@ -103,7 +109,7 @@ const updateMovie = async (id, objectData) => {
 
     return updatedMovie;
   } catch (err) {
-    console.log(err.message, "<<< updateMovie Error");
+    return err.message;
   }
 };
 

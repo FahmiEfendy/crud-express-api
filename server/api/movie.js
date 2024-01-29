@@ -39,6 +39,7 @@ const createMovie = async (req, res) => {
     });
   } catch (err) {
     console.log(err.message, "<<< createMovie Error");
+    res.status(400).send({ message: err.message });
   }
 };
 
@@ -69,6 +70,7 @@ const updateMovie = async (req, res) => {
     });
   } catch (err) {
     console.log(err.message, "<<< updateMovie Error");
+    res.status(400).send({ message: err.message });
   }
 };
 
