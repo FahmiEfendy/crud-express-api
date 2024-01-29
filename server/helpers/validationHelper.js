@@ -34,7 +34,7 @@ const updateMovieValidation = (data) => {
       .optional()
       .description("Movie release date, i.e. 2010-07-16"),
     cast: Joi.array()
-      .optionalal()
+      .optional()
       .description(
         "Movie cast, i.e. [Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page]"
       ),

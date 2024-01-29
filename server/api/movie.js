@@ -64,7 +64,7 @@ const updateMovie = async (req, res) => {
   try {
     const response = await MovieHelper.updateMovie(id, req.body);
 
-    return res.status(200).send({
+    return res.status(201).send({
       message: "Successfully Update a Data!",
       data: response,
     });
