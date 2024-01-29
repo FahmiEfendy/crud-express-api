@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "title": "Inception",
+      "director": "Christopher Nolan",
+      "genre": "Sci-Fi",
+      "releaseDate": "2010-07-16",
+      "cast": [
+        "Leonardo DiCaprio",
+        "Joseph Gordon-Levitt",
+        "Ellen Page"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "The Shawshank Redemption",
+      "director": "Frank Darabont",
+      "genre": "Drama",
+      "releaseDate": "1994-09-23",
+      "cast": [
+        "Tim Robbins",
+        "Morgan Freeman",
+        "Bob Gunton"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "The Dark Knight",
+      "director": "Christopher Nolan",
+      "genre": "Action",
+      "releaseDate": "2008-07-18",
+      "cast": [
+        "Christian Bale",
+        "Heath Ledger",
+        "Aaron Eckhart"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Pulp Fiction",
+      "director": "Quentin Tarantino",
+      "genre": "Crime",
+      "releaseDate": "1994-10-14",
+      "cast": [
+        "John Travolta",
+        "Samuel L. Jackson",
+        "Uma Thurman"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Forrest Gump",
+      "director": "Robert Zemeckis",
+      "genre": "Drama",
+      "releaseDate": "1994-07-06",
+      "cast": [
+        "Tom Hanks",
+        "Robin Wright",
+        "Gary Sinise"
+      ]
+    },
+    {
+        "id": 6,
+        "title": "The Godfather",
+        "director": "Francis Ford Coppola",
+        "genre": "Crime",
+        "releaseDate": "1972-03-24",
+        "cast": [
+          "Marlon Brando",
+          "Al Pacino",
+          "James Caan"
+        ]
+      },
+      {
+        "id": 7,
+        "title": "The Matrix",
+        "director": "The Wachowskis",
+        "genre": "Sci-Fi",
+        "releaseDate": "1999-03-31",
+        "cast": [
+          "Keanu Reeves",
+          "Laurence Fishburne",
+          "Carrie-Anne Moss"
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Schindler's List",
+        "director": "Steven Spielberg",
+        "genre": "Biography",
+        "releaseDate": "1993-12-15",
+        "cast": [
+          "Liam Neeson",
+          "Ben Kingsley",
+          "Ralph Fiennes"
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Titanic",
+        "director": "James Cameron",
+        "genre": "Romance",
+        "releaseDate": "1997-12-19",
+        "cast": [
+          "Leonardo DiCaprio",
+          "Kate Winslet",
+          "Billy Zane"
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Avatar",
+        "director": "James Cameron",
+        "genre": "Action",
+        "releaseDate": "2009-12-18",
+        "cast": [
+          "Sam Worthington",
+          "Zoe Saldana",
+          "Sigourney Weaver"
+        ]
+      }
+  ]
+  
