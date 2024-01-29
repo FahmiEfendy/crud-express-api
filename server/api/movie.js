@@ -42,8 +42,24 @@ const createMovie = async (req, res) => {
   }
 };
 
+const deleteMovie = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const response = await MovieHelper.deleteMovie(id);
+
+    return res.status(200).send({
+      message: "Successfully Deleted a Data!",
+      data: response,
+    });
+  } catch (err) {
+    console.log(err.message, "<<< deleteMovie Error");
+  }
+};
+
 Router.get("/", movieList);
 Router.get("/:id", movieListById);
 Router.post("/", createMovie);
+Router.delete("/:id", deleteMovie);
 
 module.exports = Router;

@@ -56,8 +56,28 @@ const createMovie = async (objectData) => {
   }
 };
 
+const deleteMovie = async (id) => {
+  try {
+    const movieData = await readFileAsync(moviesPath, "utf-8");
+    const parsedMovieData = JSON.parse(movieData);
+
+    const notDeletedMovie = parsedMovieData.filter(
+      (data) => String(data.id) !== id
+    );
+
+    const deletedMovie = parsedMovieData.find((data) => String(data.id) === id);
+
+    await writeFileAsync(moviesPath, JSON.stringify(notDeletedMovie));
+
+    return deletedMovie;
+  } catch (err) {
+    console.log(err.message, "<<< deleteMovie Error");
+  }
+};
+
 module.exports = {
   getMovieList,
   getMovieListById,
   createMovie,
+  deleteMovie,
 };
