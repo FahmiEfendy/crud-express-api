@@ -75,9 +75,36 @@ const deleteMovie = async (id) => {
   }
 };
 
+const updateMovie = async (id, objectData) => {
+  const { title, director, genre, releaseDate, cast } = objectData;
+
+  try {
+    const movieData = await readFileAsync(moviesPath, "utf-8");
+    const parsedMovieData = JSON.parse(movieData);
+
+    const formattedMovie = parsedMovieData.map((data) => {
+      if (String(data.id) === id) {
+        newData = {
+          id,
+          title: title || data.title,
+          director: director || data.director,
+          genre: genre || data.genre,
+          releaseDate: releaseDate || data.releaseDate,
+          cast: cast || data.cast,
+        };
+        return newData;
+      }
+      return data;
+    });
+  } catch (err) {
+    console.log(err.message, "<<< updateMovie Error");
+  }
+};
+
 module.exports = {
   getMovieList,
   getMovieListById,
   createMovie,
   deleteMovie,
+  updateMovie,
 };
