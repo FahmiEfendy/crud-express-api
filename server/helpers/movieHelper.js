@@ -28,7 +28,7 @@ const getMovieListById = async (id) => {
       (data) => String(data.id) === id
     );
 
-    return movieDataById;
+    return [movieDataById];
   } catch (err) {
     console.log(err.message, "<<< getMovieListById Error");
   }
