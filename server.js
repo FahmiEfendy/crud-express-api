@@ -6,6 +6,9 @@ const port = process.env.NODEJS_PORT || 8080;
 
 const movieRoutes = require("./server/api/movie");
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use("/movie", movieRoutes);
 
 app.listen(port, () => {
