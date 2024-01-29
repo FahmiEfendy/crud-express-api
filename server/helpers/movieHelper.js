@@ -82,7 +82,7 @@ const updateMovie = async (id, objectData) => {
     const movieData = await readFileAsync(moviesPath, "utf-8");
     const parsedMovieData = JSON.parse(movieData);
 
-    const formattedMovie = parsedMovieData.map((data) => {
+    const newMovieData = parsedMovieData.map((data) => {
       if (String(data.id) === id) {
         newData = {
           id,
@@ -96,6 +96,12 @@ const updateMovie = async (id, objectData) => {
       }
       return data;
     });
+
+    const updatedMovie = newMovieData.find((data) => String(data.id) === id);
+
+    await writeFileAsync(moviesPath, JSON.stringify(newMovieData));
+
+    return updatedMovie;
   } catch (err) {
     console.log(err.message, "<<< updateMovie Error");
   }
